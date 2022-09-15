@@ -1,0 +1,19 @@
+PROGRAM OrderOjinFood
+
+OPEN Application Ojin
+SELECT Menu OjinFood
+SEARCH Makanan yang diinginkan
+DEFINE Jumlah Makanan
+SELECT Tombol Pesan Makanan
+
+CHOOSE Cara Pembayaran
+
+IF Cara Pembayaran == Cash
+   WAIT Makanan Diantar
+   FINISH Makanan sudah diantar
+   
+ELSE
+   VERIFY Pembayaran
+   WAIT Makanan Diantar
+   FINISH Makanan sudah diantar
+
